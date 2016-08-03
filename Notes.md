@@ -42,3 +42,25 @@ a1 === a2; // => false
 a1 === a3; // => false
 a1 === a4; // => false
 ```
+
+## Numbers
+
+### Floating
+- Computer's internal representation of our base 10 literal number is actually in binary.
+- Some base 10 fractions do not have exact representation in base 2 notation which leads to error.
+- Never use `floating` point numbers to represent monetary amounts
+
+Best Practice:
+Use two variables to split fractional amount
+```js
+var dollars = 43;
+var cents = 20;
+"$" + dollars + "." + cents; //=> $43.20
+```
+
+Traps of floating numbers:
+```js
+0.1;             //=> 0.1
+0.1 + 0.1;       //=> 0.2
+0.1 + 0.1 + 0.1; //=> 0.30000000000000004
+```
