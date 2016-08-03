@@ -1,5 +1,5 @@
 ## Values and Expressions
-- All values are expressions
+*Note: All values are expressions*
 
 ### Values
 ```js
