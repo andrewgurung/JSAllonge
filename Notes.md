@@ -86,3 +86,18 @@ Like Arrays, every time you evaluate an expression to produce a function, you ge
 (()=>0) === (()=>0)
 //=> false
 ```
+
+Applying functions: fn_expression(args)
+```js
+(()=>0)();
+//=> 0
+
+(()=>"Andrew" + " " + "Gurung")();
+//=> Andrew Gurung
+
+(()=>1+2)();
+//=> 3
+
+(()=>(()=>0)())();
+//=> 0
+```
