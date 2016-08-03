@@ -101,3 +101,26 @@ Applying functions: fn_expression(args)
 (()=>(()=>0)())();
 //=> 0
 ```
+
+### Comma operator
+The `comma` operator takes two arguments, evaluates them and returns the value of the right-hand argument
+
+```js
+(1, 2); //=> 2
+(1+1, 2+2); //=> 4
+```
+
+### Block
+- A block has zero of more statements, separated by semicolons
+- A block can be added to the right of an arrow
+
+```js
+(() => {})()
+//=> undefined
+
+undefined === undefined
+//=> true
+```
+In JavaScript, `undefined` is a value that means "I don't have a value"
+
+In JavaScript, `undefined` is identical to every other `undefined`
