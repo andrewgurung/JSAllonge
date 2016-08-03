@@ -16,6 +16,7 @@
 "Andrew" + " " + "Gurung" is an `expression` made out of string `values` and an `operator`
 
 ### Value or Primitive types
+- Value types share the same identity if they have the same contents. Considered identical
 - String, numbers and booleans
 
 ```js
@@ -29,7 +30,7 @@
 ```
 
 ### Reference types
-- Same type, same content but are not considered identical
+- Reference types do not share the same identity even if they have the same contents
 - Objects such as an Array
 
 ```js
@@ -69,11 +70,19 @@ Traps of floating numbers:
 
 ### Simplest possible function
 No input values and returns `0`
-Note: Though internally JavaScript stores a full and proper function, it returns [Function] or ()=>0 based on JavaScript environment that hosts the JS REPL
+
+Note: Though internally JavaScript stores a full and proper function, it returns [Function] or ()=>0 based on JavaScript environment that hosts the JavaScript REPL
 
 ```js
 () => 0
 //=> [Function]       in NodeJS environment
 //=> function ()=>0   in Chrome envrionment
 //=> ()=>0            in Firefox envrionment
+```
+
+### Functions are reference types
+Like Arrays, every time you evaluate an expression to produce a function, you get a new function that is not identical to any other function
+```js
+(()=>0) === (()=>0)
+//=> false
 ```
