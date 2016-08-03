@@ -64,3 +64,16 @@ Traps of floating numbers:
 0.1 + 0.1;       //=> 0.2
 0.1 + 0.1 + 0.1; //=> 0.30000000000000004
 ```
+
+## Functions
+
+### Simplest possible function
+No input values and returns `0`
+Note: Though internally JavaScript stores a full and proper function, it returns [Function] or ()=>0 based on JavaScript environment that hosts the JS REPL
+
+```js
+() => 0
+//=> [Function]       in NodeJS environment
+//=> function ()=>0   in Chrome envrionment
+//=> ()=>0            in Firefox envrionment
+```
