@@ -126,3 +126,18 @@ undefined === undefined
 In JavaScript,
 - `undefined` is a value that means "I don't have a value"
 - `undefined` is identical to every other `undefined`
+
+### Three ways of generating `undefined` values
+1. Evaluating a function that doesn't have value. (()=>{})()
+  - Cumbersome
+2. By explicitly writing `undefined`
+  - `undefined` can be reassigned/mutated
+3. By using `void` operator
+  - Safe
+
+```js
+void 0;       //=> undefined
+void 1;       //=> undefined
+void (1 + 2); //=> undefined
+```
+Best Practice: Use `void` to generate `undefined` value
