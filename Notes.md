@@ -174,3 +174,19 @@ Note:
 (() => return 0)();  //=> error
 (() => {return 0})();  //=> 0
 ```
+
+### Function that evaluates to a function
+Put an expression that evaluates to a function (Eg: ()=>0) to the right side of a function expression
+
+```js
+// 1.
+() => () => 0
+
+// 2. Evaluate outer function
+(() => () => 0)()
+  // Returns:   function () => 0
+
+// 3. Evaluate outer function first and then also evaluate the inner function
+(() => () => 0)()()
+  // Returns:  0
+```
