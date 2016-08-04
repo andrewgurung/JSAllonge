@@ -66,6 +66,7 @@ Traps of floating numbers:
 0.1 + 0.1 + 0.1; //=> 0.30000000000000004
 0.3 + 0.6;       //=> 0.8999999999999999
 ```
+Reference: [Why 0.1 Does Not Exist In Floating-Point](http://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/)
 
 ## Functions
 
