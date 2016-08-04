@@ -190,3 +190,11 @@ Put an expression that evaluates to a function (Eg: ()=>0) to the right side of 
 (() => () => 0)()()
   // Returns:  0
 ```
+
+## Arguments
+
+To apply a function with an argument, put it within the parentheses
+
+```js
+((radius) => 3.14 * radius * radius)(2); //=> 12.56
+```
