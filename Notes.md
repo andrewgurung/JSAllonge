@@ -64,6 +64,7 @@ Traps of floating numbers:
 0.1;             //=> 0.1
 0.1 + 0.1;       //=> 0.2
 0.1 + 0.1 + 0.1; //=> 0.30000000000000004
+0.3 + 0.6;       //=> 0.8999999999999999
 ```
 
 ## Functions
@@ -121,6 +122,6 @@ The `comma` operator takes two arguments, evaluates them and returns the value o
 undefined === undefined
 //=> true
 ```
-In JavaScript, `undefined` is a value that means "I don't have a value"
-
-In JavaScript, `undefined` is identical to every other `undefined`
+In JavaScript,
+- `undefined` is a value that means "I don't have a value"
+- `undefined` is identical to every other `undefined`
