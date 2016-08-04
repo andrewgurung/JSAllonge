@@ -141,3 +141,36 @@ void 1;       //=> undefined
 void (1 + 2); //=> undefined
 ```
 Best Practice: Use `void` to generate `undefined` value
+
+### Statement
+- A `block` is a (possibly empty) list of JavaScript statements separated by semicolons
+- An `expression` is a JavaScript statement
+
+A block with one or more expressions still evaluates to undefined:
+```js
+// 1. Single expression will return undefined
+(() => { 2 + 3 })(); //=> undefined
+
+// 2. Block with multiple expressions will still return undefined
+(() => {
+  2 + 3;
+  1 + 2;
+})(); //=> undefined
+```
+
+To return a value when a function is applied/executed, we need the `return` keyword
+```js
+(() => {
+  return 1 + 1;
+  2 + 2;
+})(); //=> 2
+```
+
+Note:
+- `return` statement does not behave like an `expression`
+- Statements must be inside blocks `{}`
+- Other statement examples: Function declaration, for loops, if statements, etc
+```js
+(() => return 0)();  //=> error
+(() => {return 0})();  //=> 0
+```
